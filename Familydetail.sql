@@ -13,6 +13,7 @@ INSERT INTO studentdb.familydetail(std_Id, FatherName, Address ) VALUES
 
 select * from studentdb.students;
 select * from studentdb.familydetail;
+select * from studentdb.familydetail;
 
 -- Now JOIN
 -- INNER JOIN
