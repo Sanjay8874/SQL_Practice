@@ -4,7 +4,7 @@ CREATE TABLE Employees (
     id INT PRIMARY KEY,
     name VARCHAR(100),
     department VARCHAR(50),
-    salary DECIMAL(10, 2),
+    salary DECIMAL(10 , 2 ),
     joining_date DATE,
     manager_id INT
 );
@@ -76,5 +76,4 @@ INSERT INTO Attendance (id, employee_id, attendance_date, status) VALUES
 (7, 3, '2023-04-01', 'Absent'),
 (8, 3, '2023-04-02', 'Absent'),
 (9, 3, '2023-04-03', 'Present');
-
 

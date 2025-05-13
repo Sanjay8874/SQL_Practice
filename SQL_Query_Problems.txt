@@ -1,0 +1,67 @@
+🔹Beginner Level---------
+----------------------------------------------
+Retrieve all columns from a table.
+
+Get names of all employees working in a specific department.
+
+Count the number of employees in each department.
+
+Get the top 5 highest paid employees.
+
+Get the average salary of all employees.
+
+Find employees who joined in a specific year.
+
+Find employees whose name starts with a specific letter.
+
+Get departments that have more than 5 employees.
+
+Fetch duplicate records from a table.
+
+Fetch employee details with the second highest salary.
+-------------------------------------------------------------
+
+🔹 Intermediate Level
+----------------------------------------------------------------
+Retrieve the nth highest salary.
+
+Find employees who do not have a manager.
+
+List all employees along with their manager's name.
+
+Find the department with the highest total salary.
+
+Show each employee’s salary along with the average salary of their department.
+
+Get employees who have the same salary.
+
+Fetch records where a column has NULL values.
+
+Delete duplicate rows from a table.
+
+Retrieve employees whose salaries are above the average salary.
+
+Use a subquery to find employees working in the same department as a specific employee.
+---------------------------------------------------------------------------------------
+
+🔹 Advanced Level
+------------------------------------------------------------------------------
+Use a window function to rank employees by salary within departments.
+
+Retrieve the cumulative salary per department.
+
+Find consecutive days when an employee was present.
+
+Find customers who made purchases every month in a given year.
+
+Get products that were never sold.
+
+Get the total sales amount by region and month.
+
+Fetch the latest record per group (e.g., latest order per customer).
+
+Find employees who never submitted a report.
+
+Find the longest streak of working days for an employee.
+
+Perform a pivot to show total sales per product across months.
