@@ -76,3 +76,5 @@ INSERT INTO Attendance (id, employee_id, attendance_date, status) VALUES
 (7, 3, '2023-04-01', 'Absent'),
 (8, 3, '2023-04-02', 'Absent'),
 (9, 3, '2023-04-03', 'Present');
+
+
