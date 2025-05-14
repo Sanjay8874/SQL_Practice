@@ -77,3 +77,95 @@ INSERT INTO Attendance (id, employee_id, attendance_date, status) VALUES
 (8, 3, '2023-04-02', 'Absent'),
 (9, 3, '2023-04-03', 'Present');
 
+CREATE TABLE Products (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    price DECIMAL(10, 2)
+);
+
+INSERT INTO Products (id, name, price) VALUES
+(101, 'Laptop', 1500.00),
+(102, 'Mobile', 3000.00),
+(103, 'Tablet', 4500.00),
+(104, 'Monitor', 2000.00);
+
+#Retrieve all columns from a table.
+Select * from employees;
+select * from department;
+select * from products;
+select * from attendance;
+select * from customers;
+select * from orders;
+
+#Get names of all employees working in a specific department.
+select name from employees where department="HR";
+
+
+#Count the number of employees in each department.
+select count(name) from employees where department="HR";
+SELECT department, COUNT(*) AS employee_count
+FROM Employees
+GROUP BY department;
+
+########################################################################################################
+#Count the employee salary more then 50000
+select department AS departmant_name, count(*) AS employee_count from employees where salary>50000 GROUP BY department;
+
+
+#Get the average salary of all employees.
+SELECT AVG(salary) as average_salary from employees;
+
+#Get the average salary of all employees in each department.
+SELECT department, AVG(salary) from employees group by department;
+
+#Find employees who joined in a specific year.
+SELECT name, joining_date from employees where joining_date LIKE '%2023%';
+
+SELECT name, joining_date
+FROM Employees
+WHERE YEAR(joining_date) = 2023;
+
+#Find employees whose name starts with a specific letter.
+SELECT name from employees where name LIKE 'A%';
+
+#Get departments that have more than 5 employees.
+SELECT department, COUNT(*) AS employee_count
+FROM Employees
+GROUP BY department
+HAVING COUNT(*) > 2;
+
+#Fetch duplicate records from a table.
+SELECT name, department, COUNT(*) AS count
+FROM Employees
+GROUP BY name, department
+HAVING COUNT(*) > 1;
+
+#Fetch employee details with the second highest salary.
+
+#OFFSET will skip the first row--> first is will skip and then limit the row
+SELECT DISTINCT salary
+FROM Employees
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1;
+
+#find employee detail for second highest salary
+SELECT *
+FROM Employees
+WHERE salary = (
+    SELECT DISTINCT salary
+    FROM Employees
+    ORDER BY salary DESC
+    LIMIT 1 OFFSET 1
+);
+
+SELECT *
+FROM Employees
+WHERE salary = (
+    SELECT MAX(salary)
+    FROM Employees
+    WHERE salary < (
+        SELECT MAX(salary)
+        FROM Employees
+    )
+);
+#######################################################################################################
